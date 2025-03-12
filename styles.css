@@ -1,0 +1,144 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --color-gray-dark: rgba(17, 17, 17, 1);
+  --color-gray-light: rgba(107, 107, 107, 1);
+  --color-white: rgba(255, 255, 255, 1);
+  --color-yellow: rgba(244, 208, 78, 1);
+}
+
+html,
+body {
+  font-family: 'Figtree', sans-serif;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--color-yellow);
+}
+
+/* Card */
+.card {
+  max-width: 384px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  padding: 24px;
+  border-radius: 20px;
+  border: 1px solid var(--color-gray-dark);
+  background: var(--color-white);
+  box-shadow: 8px 8px 0px 0px #000;
+  color: var(--color-gray-dark);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 13px 13px 0px 0px #000;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Card content */
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.card-content .label {
+  display: flex;
+  padding: 4px 12px;
+  justify-content: center;
+  align-items: center;
+  background: var(--color-yellow);
+  border-radius: 4px;
+}
+
+.card-content .label-text {
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+.card-content .date {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.card-content .title {
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+.card-content .title:hover {
+  color: var(--color-yellow);
+}
+
+.card-content .description {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--color-gray-light);
+}
+
+/* Card Author */
+.card .author {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: start;
+}
+.card .author img {
+  width: 32px;
+  height: 32px;
+}
+
+.card .author .author-name {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .card {
+    width: 327px;
+  }
+
+  .card-content .label-text {
+    font-size: 12px;
+  }
+
+  .card-content .date {
+    font-size: 12px;
+  }
+
+  .card-content .title {
+    font-size: 20px;
+  }
+
+  .card-content .description {
+    font-size: 14px;
+  }
+}
