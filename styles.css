@@ -13,9 +13,9 @@
   --color-yellow: rgba(244, 208, 78, 1);
 }
 
-html,
 body {
   font-family: 'Figtree', sans-serif;
+  background: var(--color-yellow);
 }
 
 /* Container */
@@ -25,7 +25,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: var(--color-yellow);
 }
 
 /* Card */
@@ -118,6 +117,10 @@ body {
   font-size: 14px;
   font-weight: 700;
   line-height: 1.5;
+}
+
+footer {
+  text-align: center;
 }
 
 /* Media Queries */
